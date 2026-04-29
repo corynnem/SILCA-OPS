@@ -52,6 +52,7 @@ const BarcodeScanner = ({
       if (!scanned) return;
 
       setBarcode(scanned);
+      console.log(scanned)
 
       const result = handleInputChange(
         Number(scanned),

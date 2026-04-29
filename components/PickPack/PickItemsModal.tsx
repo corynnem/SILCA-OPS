@@ -18,10 +18,10 @@ interface PickItemsModalProps {
 }
 
 const MOCK_SCANS = [
-  { label: "Elettrico", upc: "810093162987" },
+  { label: "Elettrico Ultimate", upc: "810093162987" },
   { label: "CWS", upc: "810093162642" },
-  { label: "SS", upc: "810093160938" },
-  { label: "Hot Wax", upc: "850005186328" },
+  { label: "SS 4oz", upc: "810093161706" },
+  { label: "Hot Wax", upc: "810093162024" },
 ];
 
 const PickItemsModal = ({ salesOrderNumber }: PickItemsModalProps) => {
