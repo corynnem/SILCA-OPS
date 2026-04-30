@@ -7,6 +7,7 @@ import {
   TableCell, TableHead, TableRow, Chip, IconButton,
   Dialog, DialogTitle, DialogContent, DialogActions,
   Divider, Alert,
+  TextField,
 } from "@mui/material";
 import {
   QrCodeScanner as ScannerIcon,
@@ -23,7 +24,7 @@ import {
 import { ScannerWidget } from "./ScannerWidget";
 
 import { CountedItem } from "@/types/CycleCountTypes";
-import { NAME_MAP, findItemByUPC, MOCK_ITEMS } from "./helpers";
+import { findItemByUPC, searchForItem } from "./helpers";
 
 
 const CycleCount = () =>  {
@@ -86,31 +87,6 @@ const CycleCount = () =>  {
     }
   }, [flash]);
 
-
-  // Simpler mockScan: just call handleKeyDown logic directly via a fake event
-  const handleMockScan = useCallback((upc: string) => {
-    setLastBarcode(upc);
-    const item = findItemByUPC(Number(upc));
-    if (!item) {
-      flash("error");
-      setUnknownBarcodes((prev) => prev.includes(upc) ? prev : [...prev, upc]);
-      return;
-    }
-    flash("success");
-    setCounts((prev) => {
-      const existing = prev[item.sku];
-      return {
-        ...prev,
-        [item.sku]: {
-          sku: item.sku,
-          name: item.name,
-          count: (existing?.count ?? 0) + 1,
-          lastScanned: new Date().toISOString(),
-        },
-      };
-    });
-  }, [flash]);
-
   const items = Object.values(counts).sort(
     (a, b) => new Date(b.lastScanned).getTime() - new Date(a.lastScanned).getTime()
   );
@@ -160,6 +136,7 @@ const CycleCount = () =>  {
     }
   };
 
+
   return (
     <Box>
       {/* Header */}
@@ -207,11 +184,13 @@ const CycleCount = () =>  {
 
       {/* Mock scan buttons */}
       <Box sx={{ mt: 1.5, mb: 3 }}>
-        <Button size="small" startIcon={<BugIcon sx={{ fontSize: 14 }} />} onClick={() => setShowMock((v) => !v)}
-          sx={{ fontSize: "0.65rem", color: "#a3a3a3", p: 0 }}>
-          {showMock ? "Hide" : "Show"} mock scan buttons
-        </Button>
-        {showMock && (
+        <TextField onChange={(e) => searchForItem(e.target.value)}/>
+        <Typography 
+          sx={{ fontSize: "1rem", color: "#a3a3a3", p: 0 }}>
+            Search for item
+        </Typography>
+        
+        {/* {showMock && (
           <Stack direction="row" flexWrap="wrap" gap={0.75} sx={{ mt: 1 }}>
             {MOCK_ITEMS.map((item) => (
               <Button key={item.upc} size="small" variant="outlined"
@@ -221,7 +200,7 @@ const CycleCount = () =>  {
               </Button>
             ))}
           </Stack>
-        )}
+        )} */}
       </Box>
 
       {/* Unknown barcodes warning */}

@@ -1,18 +1,3 @@
-export const PRODUCTS = [
-  { sku: "AM-PU-001-ASY-0100BK", name: "Super Pista Ultimate – Black" },
-  { sku: "AM-PU-001-ASY-0100SL", name: "Super Pista Ultimate – Silver" },
-  { sku: "AM-PU-002-ASY-0100RD", name: "Pista Corsa – Red" },
-  { sku: "AM-PU-004-ASY-0300SL", name: "Impero Ultimate – Silver" },
-  { sku: "AM-PU-006-ASY-0000SL", name: "Tattico Bluetooth – Silver" },
-  { sku: "AM-PU-009-ASY-0200BK", name: "Eolo III – Black" },
-  { sku: "AM-AC-007-COI-0300BK", name: "Cielo Road Tire – Black" },
-  { sku: "AM-AC-008-COI-0000SL", name: "Mensola Wall Mount – Silver" },
-  { sku: "AM-AP-010-COI-0000BK", name: "Leggero Saddle Bag – Black" },
-  { sku: "AM-TO-005-ASY-0000SL", name: "Ultimate Torque Wrench – Silver" },
-  { sku: "FG-PU-003-ASY-0100BK", name: "Imperatore – Black" },
-  { sku: "AM-RM-098-RAW-0000NB", name: "Standard Hardware Kit" },
-];
-
 export const REASONS = [
   "Cycle Count Adjustment",
   "Damaged Goods",

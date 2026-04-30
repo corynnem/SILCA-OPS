@@ -11,7 +11,7 @@ import BarcodeScanner from "./BarcodeScanner";
 import { getIndividualSalesOrder, handleInputChange, findScannedItem } from "./helpers";
 import { DataGridContext } from "@/context/DataGridContext";
 import { removeSalesOrder } from "@/helpers";
-import { Items } from "@/types/SalesOrderTypes";
+import { Items } from "@/types/SalesOrderTypes"
 
 interface PickItemsModalProps {
   salesOrderNumber: string;
