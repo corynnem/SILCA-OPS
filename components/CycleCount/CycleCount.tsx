@@ -26,16 +26,11 @@ import { CountedItem } from "@/types/CycleCountTypes";
 import { NAME_MAP, findItemByUPC, MOCK_ITEMS } from "./helpers";
 
 
-// ─── ScannerWidget ────────────────────────────────────────────────────────────
-
-
-// ─── Main Component ───────────────────────────────────────────────────────────
-
 const CycleCount = () =>  {
   const [counts, setCounts] = useState<Record<string, CountedItem>>({});
   const [lastBarcode, setLastBarcode] = useState("");
   const [flashState, setFlashState] = useState<"idle" | "success" | "error">("idle");
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(true);
   const [showMock, setShowMock] = useState(false);
   const [clearDialogOpen, setClearDialogOpen] = useState(false);
   const [unknownBarcodes, setUnknownBarcodes] = useState<string[]>([]);

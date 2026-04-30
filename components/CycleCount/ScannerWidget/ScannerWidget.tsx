@@ -3,12 +3,6 @@
 import { Box, Typography, Paper, Stack, Chip, Divider } from "@mui/material";
 import {
   QrCodeScanner as ScannerIcon,
-  Download as DownloadIcon,
-  Delete as DeleteIcon,
-  DeleteSweep as ClearIcon,
-  Add as AddIcon,
-  Remove as RemoveIcon,
-  BugReport as BugIcon,
   CheckCircle as CheckIcon,
   Warning as WarningIcon,
 } from "@mui/icons-material";
@@ -32,6 +26,7 @@ const ScannerWidget = ({
   inputRef: React.RefObject<HTMLInputElement>;
   onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }) => {
+    
   const borderColor =
     flashState === "success"
       ? "#bbf7d0"
