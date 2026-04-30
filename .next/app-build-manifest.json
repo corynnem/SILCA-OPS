@@ -35,6 +35,22 @@
       "static/chunks/394-72ecae44d6544397.js",
       "static/chunks/app/cycle-count/page-ce72c21ee926cf6d.js"
     ],
+    "/bulk-adjustment/page": [
+      "static/chunks/webpack-9427f366bbd42655.js",
+      "static/chunks/fd9d1056-3de4f45319267108.js",
+      "static/chunks/23-25542a3aa7080d7d.js",
+      "static/chunks/main-app-ce942eb00e801ab4.js",
+      "static/chunks/2170a4aa-2d08f2e8926e1a99.js",
+      "static/chunks/970-36cf24c504b687d1.js",
+      "static/chunks/908-3605ea14b88ab4db.js",
+      "static/chunks/445-958dd24d30144c1f.js",
+      "static/chunks/136-dd5d87d26ca3d63e.js",
+      "static/chunks/884-1ef3c957b4ea24a0.js",
+      "static/chunks/3-2839f8def4a63fd8.js",
+      "static/chunks/360-461840c5608d770a.js",
+      "static/chunks/565-148daf21ab365f6a.js",
+      "static/chunks/app/bulk-adjustment/page-c67a4aa65e4c34ce.js"
+    ],
     "/page": [
       "static/chunks/webpack-9427f366bbd42655.js",
       "static/chunks/fd9d1056-3de4f45319267108.js",
@@ -58,22 +74,6 @@
       "static/chunks/454-acb7911ddc930e01.js",
       "static/chunks/394-72ecae44d6544397.js",
       "static/chunks/app/pick-and-pack/page-46acbe691d42714d.js"
-    ],
-    "/bulk-adjustment/page": [
-      "static/chunks/webpack-9427f366bbd42655.js",
-      "static/chunks/fd9d1056-3de4f45319267108.js",
-      "static/chunks/23-25542a3aa7080d7d.js",
-      "static/chunks/main-app-ce942eb00e801ab4.js",
-      "static/chunks/2170a4aa-2d08f2e8926e1a99.js",
-      "static/chunks/970-36cf24c504b687d1.js",
-      "static/chunks/908-3605ea14b88ab4db.js",
-      "static/chunks/445-958dd24d30144c1f.js",
-      "static/chunks/136-dd5d87d26ca3d63e.js",
-      "static/chunks/884-1ef3c957b4ea24a0.js",
-      "static/chunks/3-2839f8def4a63fd8.js",
-      "static/chunks/360-461840c5608d770a.js",
-      "static/chunks/565-148daf21ab365f6a.js",
-      "static/chunks/app/bulk-adjustment/page-c67a4aa65e4c34ce.js"
     ],
     "/inventory-adjustment/page": [
       "static/chunks/webpack-9427f366bbd42655.js",
