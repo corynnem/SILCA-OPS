@@ -237,7 +237,7 @@ const CycleCount = () =>  {
       )}
 
       {/* Count table */}
-      <Paper variant="outlined" sx={{ borderRadius: 2, overflow: "hidden" }}>
+      <Paper variant="outlined" sx={{ borderRadius: 2, overflow: "scroll" }}>
         <Box sx={{ px: 3, py: 2, borderBottom: "1px solid #f5f5f5", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <Box>
             <Typography sx={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "text.secondary" }}>Count Results</Typography>
