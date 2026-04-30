@@ -77,6 +77,7 @@ const ScannerWidget = ({
         }}
         autoComplete="off"
         aria-label="barcode scanner input"
+        inputMode="none"
       />
 
       <Box sx={{ p: 3, display: "flex", alignItems: "center", gap: 3 }}>
