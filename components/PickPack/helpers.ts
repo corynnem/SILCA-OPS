@@ -1,9 +1,9 @@
-import { upc_codes, mockSalesOrders as defaultOrders } from "@/data/mockData";
+import { products, mockSalesOrders as defaultOrders } from "@/data/mockData";
 import { ErrorModalText } from "@/context/DataGridContext";
 import { Items, SalesOrders } from "@/types/SalesOrderTypes";
 
 export const findScannedItem = (scannedCode: number): string | undefined => {
-  const result = upc_codes.find((item) => item.GTIN === scannedCode);
+  const result = products.find((product) => product.GTIN === scannedCode);
   return result ? result["SKU"] : undefined;
 };
 

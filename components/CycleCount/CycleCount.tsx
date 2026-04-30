@@ -136,41 +136,13 @@ const CycleCount = () =>  {
     }
   };
 
-  // const handleSearch = (inputValues) => {
-
-
-  // }
-  
-  
-  // useCallback((upc: string) => {
-  //   setLastBarcode(upc);
-  //   const item = findItemByUPC(Number(upc));
-  //   if (!item) {
-  //     flash("error");
-  //     setUnknownBarcodes((prev) => prev.includes(upc) ? prev : [...prev, upc]);
-  //     return;
-  //   }
-  //   flash("success");
-  //   setCounts((prev) => {
-  //     const existing = prev[item.sku];
-  //     return {
-  //       ...prev,
-  //       [item.sku]: {
-  //         sku: item.sku,
-  //         name: item.name,
-  //         count: (existing?.count ?? 0) + 1,
-  //         lastScanned: new Date().toISOString(),
-  //       },
-  //     };
-  //   });
-  // }, [flash]);
 
 
 
   return (
     <Box>
       {/* Header */}
-      <Stack direction="row" alignItems="flex-start" justifyContent="space-between" sx={{ mb: 3 }}>
+      <Stack direction="column" alignItems="flex-start" justifyContent="space-between" sx={{ mb: 3 }}>
         <Box>
           <Typography variant="h5" fontWeight={700} color="text.primary">Cycle Count</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
@@ -212,26 +184,6 @@ const CycleCount = () =>  {
         onBlurCapture={() => setIsFocused(false)}
       />
 
-      {/* Mock scan buttons */}
-      <Box sx={{ mt: 1.5, mb: 3 }}>
-        <TextField onChange={(e) => searchForItem(e.target.value)}/>
-        <Typography 
-          sx={{ fontSize: "1rem", color: "#a3a3a3", p: 0 }}>
-            Search for item
-        </Typography>
-        
-        {/* {showMock && (
-          <Stack direction="row" flexWrap="wrap" gap={0.75} sx={{ mt: 1 }}>
-            {MOCK_ITEMS.map((item) => (
-              <Button key={item.upc} size="small" variant="outlined"
-                onClick={() => handleMockScan(item.upc)}
-                sx={{ fontSize: "0.65rem", borderColor: "#e5e5e5", color: "text.secondary", py: 0.25 }}>
-                {item.label}
-              </Button>
-            ))}
-          </Stack>
-        )} */}
-      </Box>
 
       {/* Unknown barcodes warning */}
       {unknownBarcodes.length > 0 && (
