@@ -26,7 +26,7 @@ const ScannerWidget = ({
   inputRef: React.RefObject<HTMLInputElement>;
   onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }) => {
-    
+
   const borderColor =
     flashState === "success"
       ? "#bbf7d0"
@@ -59,7 +59,7 @@ const ScannerWidget = ({
         borderColor,
         bgcolor: bgColor,
         transition: "all 0.25s",
-        overflow: "hidden",
+        overflow: "scroll",
         cursor: "text",
       }}
     >
