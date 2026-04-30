@@ -136,6 +136,36 @@ const CycleCount = () =>  {
     }
   };
 
+  // const handleSearch = (inputValues) => {
+
+
+  // }
+  
+  
+  // useCallback((upc: string) => {
+  //   setLastBarcode(upc);
+  //   const item = findItemByUPC(Number(upc));
+  //   if (!item) {
+  //     flash("error");
+  //     setUnknownBarcodes((prev) => prev.includes(upc) ? prev : [...prev, upc]);
+  //     return;
+  //   }
+  //   flash("success");
+  //   setCounts((prev) => {
+  //     const existing = prev[item.sku];
+  //     return {
+  //       ...prev,
+  //       [item.sku]: {
+  //         sku: item.sku,
+  //         name: item.name,
+  //         count: (existing?.count ?? 0) + 1,
+  //         lastScanned: new Date().toISOString(),
+  //       },
+  //     };
+  //   });
+  // }, [flash]);
+
+
 
   return (
     <Box>
