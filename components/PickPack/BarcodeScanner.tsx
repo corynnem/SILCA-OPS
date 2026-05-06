@@ -43,7 +43,7 @@ const BarcodeScanner = ({
     e.preventDefault();
   }, []);
 
-  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = useCallback(async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       const scanned = (e.currentTarget.value ?? "").trim();
       // Clear the input immediately
@@ -52,9 +52,8 @@ const BarcodeScanner = ({
       if (!scanned) return;
 
       setBarcode(scanned);
-      console.log(scanned)
 
-      const result = handleInputChange(
+      const result = await handleInputChange(
         Number(scanned),
         orderItemsRef.current,
         scanCountsRef.current

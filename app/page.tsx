@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function Home() {
-  redirect("/pick-and-pack");
+  redirect('/pick-and-pack')
 }
