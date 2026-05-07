@@ -24,10 +24,12 @@ import {
 import { ScannerWidget } from "./ScannerWidget";
 
 import { CountedItem } from "@/types/CycleCountTypes";
-import { findItemByUPC, searchForItem } from "./helpers";
+import { findItemByUPC } from "./helpers";
+import { useBarcodeByGTIN } from "@/lib/graphql/hooks";
 
 
 const CycleCount = () =>  {
+  const { lookup } = useBarcodeByGTIN()
   const [counts, setCounts] = useState<Record<string, CountedItem>>({});
   const [lastBarcode, setLastBarcode] = useState("");
   const [flashState, setFlashState] = useState<"idle" | "success" | "error">("idle");
@@ -49,6 +51,8 @@ const CycleCount = () =>  {
     if (!clearDialogOpen) inputRef.current?.focus();
   }, [clearDialogOpen]);
 
+
+
   const flash = useCallback((state: "success" | "error") => {
     setFlashState(state);
     if (flashTimeout.current) clearTimeout(flashTimeout.current);
@@ -64,6 +68,9 @@ const CycleCount = () =>  {
 
       setLastBarcode(scanned);
       const item = findItemByUPC(Number(scanned));
+      const gtin = Number(scanned)
+      // const item = lookup(gtin)
+
 
       if (!item) {
         flash("error");

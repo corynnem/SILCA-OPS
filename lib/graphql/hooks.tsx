@@ -306,6 +306,7 @@ export function useBarcodeByGTIN() {
           BARCODE_BY_GTIN_QUERY,
           { gtin }
         );
+
         setState({ data: data.barcodeByGTIN, loading: false, error: null });
         return data.barcodeByGTIN;
       } catch (err) {

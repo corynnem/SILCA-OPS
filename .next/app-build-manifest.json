@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/login/page": [
+    "/cycle-count/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/login/page.js"
+      "static/chunks/app/cycle-count/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/pick-and-pack/page.js"
     ],
-    "/cycle-count/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/cycle-count/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
